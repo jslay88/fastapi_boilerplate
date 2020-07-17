@@ -2,7 +2,7 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    AUTH_ENABLED = True
+    pass
 
 
 settings = Settings()

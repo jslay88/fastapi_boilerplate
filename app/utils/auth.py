@@ -5,8 +5,6 @@ from dataclasses import dataclass
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
-from ..settings import settings
-
 
 logger = logging.getLogger(__name__)
 
@@ -25,9 +23,11 @@ class APITokens:
         })
 
     @classmethod
+    def remove_token(cls, token: str):
+        cls._tokens = [t for t in cls._tokens if t['token'] != token]
+
+    @classmethod
     def validate_token(cls, token: str) -> Optional[dict]:
-        if not settings.AUTH_ENABLED:
-            return {'token': 'AUTH_DISABLED', 'description': 'Authentication has been disabled.'}
         for _token in cls._tokens:
             if token.lower() == _token['token'].lower():
                 return _token

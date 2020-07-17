@@ -5,7 +5,9 @@ RUN apk add --no-cache --virtual .build-deps gcc libc-dev make \
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
+COPY container/prestart.sh /app/prestart.sh
 COPY container/start.sh /start.sh
+RUN chmod +x /app/prestart.sh
 RUN chmod +x /start.sh
 
 COPY gunicorn_conf.py /gunicorn_conf.py
