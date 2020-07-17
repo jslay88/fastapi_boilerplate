@@ -25,3 +25,11 @@ Remove `remote origin` and add your remote origin.
 Use docker-compose to start the application
 
     docker-compose up --build
+    
+Docs are available at
+    
+    http://localhost:8080/api/v1/
+    
+Default Token (defined in `app/__init__.py`)
+
+    ABCABCABC
