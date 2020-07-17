@@ -7,7 +7,6 @@ from .model.example.endpoints import router as model_example_router
 
 
 logger = logging.getLogger(__name__)
-[logger.removeHandler(handler) for handler in logger.handlers]
 
 
 api = FastAPI(title='Test FastAPI App',
