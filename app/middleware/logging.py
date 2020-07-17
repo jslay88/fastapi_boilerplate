@@ -27,8 +27,9 @@ class LogTransactionMiddleware(BaseHTTPMiddleware):
     ) -> Response:
         def log_request(r: Request):
             logger.info('Log Request', extra={
-                'url': r.url,
-                'headers': r.headers
+                'path': r.url.path,
+                'headers': [(k, v if k != 'authorization' else f'{v[:12]}{"*" * (len(v) - 12)}')
+                            for k, v in r.headers.items()]
             })
 
         def log_response(r: Response):

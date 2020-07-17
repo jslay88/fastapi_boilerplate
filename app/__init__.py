@@ -11,7 +11,7 @@ from .utils.auth import APITokens
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
 
-APITokens.register_token('ABC', 'ABC Token')
+APITokens.register_token('ABCABCABC', 'ABC Token')
 
 app = FastAPI()
 app.mount('/api/v1', api_v1)
