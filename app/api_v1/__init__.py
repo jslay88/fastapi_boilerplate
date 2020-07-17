@@ -9,7 +9,7 @@ from .model.example.endpoints import router as model_example_router
 logger = logging.getLogger(__name__)
 
 
-api = FastAPI(title='Test FastAPI App',
+api = FastAPI(title='FastAPI App',
               description='This is <strong>an api</strong> that has <code>code and stuff</code> you know?',
               version='1.0.0',
               docs_url='/')
