@@ -21,3 +21,7 @@ Remove `remote origin` and add your remote origin.
     git remote remove origin
     git remote add origin https://github.com/username/repo
     git push -u origin master
+    
+Use docker-compose to start the application
+
+    docker-compose up --build
