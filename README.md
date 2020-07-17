@@ -39,7 +39,8 @@ Default Token (defined in `app/__init__.py`)
 You really do not want to put any sort of token within the code itself.
 Ideally, you would read some file from disk that is either mounted to 
 the container or downloaded with the `prestart.sh` script and 
-register your tokens using `APITokens.regsiter_token` from `app.utils.auth`. 
+register your tokens using `APITokens.regsiter_token` from `app.utils.auth` 
+within `app.create_app`. 
 
 This has purposefully be left this way to make you understand the simplicity 
 being used here, and up to you to improve upon, or replace this method all together.
