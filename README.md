@@ -42,7 +42,7 @@ the container or downloaded with the `prestart.sh` script and
 register your tokens using `APITokens.regsiter_token` from `app.utils.auth` 
 within `app.create_app`. 
 
-This has purposefully be left this way to make you understand the simplicity 
+This has purposefully been left this way to make you understand the simplicity 
 being used here, and up to you to improve upon, or replace this method all together.
 
 More information around Security with FastAPI can be found 
