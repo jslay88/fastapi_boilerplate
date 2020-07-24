@@ -12,7 +12,7 @@ A FastAPI application boilerplate built for ML teams.
 
 
 ## Getting Starting
-Clone the repo to a project dir
+Clone the repo to a project dir.
 Optionally, remove `remote origin` and add your remote origin, or other name for your remote.
 
     git clone https://github.com/jslay88/fastapi_boilerplate my_project
