@@ -1,9 +1,9 @@
 FROM python:3.8-alpine3.10 as base
 RUN apk add --no-cache --virtual .build-deps gcc libc-dev make \
-    && pip install --no-cache-dir uvicorn gunicorn \
-    && apk del .build-deps gcc libc-dev make
+    && pip install -U --no-cache-dir uvloop pip setuptools
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
+RUN apk del .build-deps
 
 COPY container/prestart.sh /app/prestart.sh
 COPY container/start.sh /start.sh

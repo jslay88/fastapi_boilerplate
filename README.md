@@ -11,7 +11,7 @@ A FastAPI application boilerplate built for ML teams.
 * Pre-Start scripts for downloading/setting up files pre-start
 
 
-## Getting Starting
+## Getting Started
 Clone the repo to a project dir.
 Optionally, remove `remote origin` and add your remote origin, or other name for your remote.
 
