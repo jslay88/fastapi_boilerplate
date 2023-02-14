@@ -19,6 +19,6 @@ pydantic==1.7.4
 pyflakes==2.2.0
 pyparsing==2.4.7
 pytest==6.2.1
-starlette==0.13.6
+starlette==0.25.0
 toml==0.10.2
 uvicorn==0.13.3
